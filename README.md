@@ -14,7 +14,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init tink/react-redux-boilerplate my-project
+$ vue init TinkGu/react-redux-boilerplate my-project
 $ cd my-project
 $ npm install
 $ npm start

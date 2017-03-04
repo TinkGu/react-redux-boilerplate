@@ -1,0 +1,9 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "A full-featured react+redux boilerplate with ant.design and css-modules.",
+  "devDependencies": {
+    "vue-cli": "^2.8.1"
+  }
+}

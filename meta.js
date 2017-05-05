@@ -23,6 +23,10 @@ module.exports = {
             "type": "confirm",
             "message": "Install ant.design?"
         },
+        "resetCss": {
+            "type": "confirm",
+            "message": "Normalize the default style?"
+        },
         "needExample": {
             "type": "confirm",
             "message": "Need some example files?"
@@ -31,6 +35,7 @@ module.exports = {
     "filters": {
         "build/modifyAntdTheme.js": "antd",
         "src/styles/antdTheme.less": "antd",
+        "src/styles/reset.css": "resetCss",
         "src/actions/books.js": "needExample",
         "src/actions/notification.js": "needExample",
         "src/apis/books.js": "needExample",

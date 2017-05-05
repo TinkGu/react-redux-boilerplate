@@ -45,6 +45,9 @@
     {{#antd}}
     "antd": "^2.7.0",
     {{/antd}}
+    {{#resetCss}}
+    "normalize.css": "^7.0.0",
+    {{/resetCss}}
     "axios": "^0.15.3",
     "babel-polyfill": "^6.20.0",
     "classnames": "^2.2.5",

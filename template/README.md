@@ -71,6 +71,7 @@ or `npm i cnpm -g`
     * images/           # 图片
   - styles/             # 全局样式
     * antdTheme.less    # 定制 antd 样式
+    * reset.less        # 当未引入 antd 时，进行 normalize
     * mixins.less       # 全局公用的 less 工具函数
     * variables.less    # 全局公用的 less 变量，如色彩，字重等
   - utils/

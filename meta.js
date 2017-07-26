@@ -27,12 +27,18 @@ module.exports = {
             "type": "confirm",
             "message": "Normalize the default style?"
         },
+        "eslint": {
+            "type": "confirm",
+            "message": "Support ESLint?"
+        },
         "needExample": {
             "type": "confirm",
             "message": "Need some example files?"
         }
     },
     "filters": {
+        ".eslintignore": "eslint",
+        ".eslintrc.js": "eslint",
         "build/modifyAntdTheme.js": "antd",
         "src/styles/antdTheme.less": "antd",
         "src/styles/reset.css": "resetCss",

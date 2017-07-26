@@ -1,13 +1,14 @@
 # {{ name }}
----
+
 {{ description }}
 
 # dev sop
+
 ## pre install
 
 - node >= 4.4.2
-- npm >= 3.x <br>
-or `npm i cnpm -g`
+- npm >= 3.x<br>
+  or `npm i cnpm -g`
 - webpack
 
   ```
@@ -21,6 +22,7 @@ or `npm i cnpm -g`
   ```
 
 - nodemon
+
   ```
   cnpm i -g nodemon
   ```
@@ -33,9 +35,11 @@ or `npm i cnpm -g`
 
 ## mock server
 
-- `cp mock/db.json.sample db.json` <br>
+- `cp mock/db.json.sample db.json`<br>
+
 - `npm run mock`
-- open `127.0.0.1:3020` in your browser <br>
+
+- open `127.0.0.1:3020` in your browser<br>
   根据你本地 `config.js` 设置的 `port` 和 `host` 可能会略有不同。
 
 ## run app
@@ -85,6 +89,7 @@ or `npm i cnpm -g`
 + package.json
 + README.md
 ```
+
 `*.sample` 是预置文件，本身不可用，必须以它为模板生成一份目标文件。此类文件常用于 `dev config`，各个人员之间的开发配置不同，修改后会污染 `git status`。<br>
 为此，只将 `*.sample` 文件加入 git ，其目标文件会被 gitignore。<br><br>
 **如果你确实需要修改 config，并让每一个人都使用（比如添加某个属性），请记得将修改同步到对应的 `.sample`, 并在合并 pr 后提醒同事。**

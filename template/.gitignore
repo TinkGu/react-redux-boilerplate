@@ -1,7 +1,17 @@
+# Don't check auto-generated stuff into git
+coverage
+build
+node_modules
+stats.json
+
+# Cruft
 *.swp
 .DS_Store
-node_modules/
 npm-debug.log
+.idea
+.vscode
 
-./config.js
-mock/db.json
+bundle
+bundles
+dist
+dists

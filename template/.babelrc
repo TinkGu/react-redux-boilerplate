@@ -1,13 +1,39 @@
 {
-    "presets": ["es2015", "react", "stage-0"],
+    "presets": [
+        [
+            "env",
+            {
+                "useBuiltIns": true,
+                "modules": false
+            }
+        ],
+        "react",
+        "stage-0"
+    ],
     "plugins": [
-        "transform-decorators-legacy",
-        "react-hot-loader/babel",
-        {{#antd}}
-        ["import", {
-            "libraryName": "antd",
-            "style": true
-        }]
-        {{/antd}}
-    ]
+        "transform-runtime",
+        "babel-plugin-transform-decorators-legacy",
+        "react-hot-loader/babel"
+    ],
+    "env": {
+        "production": {
+            "presets": [
+                [
+                    "env",
+                    {
+                        "useBuiltIns": true,
+                        "modules": false
+                    }
+                ],
+                "react",
+                "stage-0",
+                "react-optimize"
+            ],
+            "plugins": [
+                "transform-runtime",
+                "babel-plugin-transform-decorators-legacy",
+                "transform-remove-console"
+            ]
+        }
+    }
 }

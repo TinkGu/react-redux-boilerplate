@@ -1,30 +1,30 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var autoprefixer = require('autoprefixer');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
-var env = process.env.NODE_ENV.trim();
+const env = process.env.NODE_ENV.trim();
 
-var distDir = 'dist';
-var imagesDir = 'images';
-var rootPath = path.resolve(__dirname, '../');
-var srcPath = path.join(rootPath, 'src');
-var distPath = path.join(rootPath, distDir);
-var entryPath = path.join(srcPath, 'index.js');
+const distDir = 'dist';
+const imagesDir = 'images';
+const rootPath = path.resolve(__dirname, '../');
+const srcPath = path.join(rootPath, 'src');
+const distPath = path.join(rootPath, distDir);
+const entryPath = path.join(srcPath, 'index.js');
 {{#antd}}
 
 // customize ant-design theme
 // see https://ant.design/docs/react/customize-theme-cn
-var antdTheme = require('./modifyAntdTheme.js');
-var lessOption = '?{"modifyVars": ' + JSON.stringify(antdTheme) + '}';
+const antdTheme = require('./modifyAntdTheme.js');
+const lessOption = '?{"modifyVars": ' + JSON.stringify(antdTheme) + '}';
 {{/antd}}
 {{#cssModules}}
 
 // enable css-modules
 // see https://github.com/css-modules/webpack-demo
-var cssOption = '?modules&camelCase&localIdentName=[name]-[local]__[hash:base64:5]';
+const cssOption = '?modules&camelCase&localIdentName=[name]-[local]__[hash:base64:5]';
 {{/cssModules}}
 
 module.exports = {
@@ -57,22 +57,7 @@ module.exports = {
         modules: ['src', 'node_modules'],
         extensions: ['', '.js', '.jsx', '.less', '.css'],
         alias: {
-            _actions: aliasDir('actions'),
-            _apis: aliasDir('apis'),
-            _components: aliasDir('components'),
-            _config: aliasDir('../config'),
-            _constants: aliasDir('constants'),
-            _containers: aliasDir('containers'),
-            _reducers: aliasDir('reducers'),
-            _routes: aliasDir('routes'),
-            _services: aliasDir('services'),
-            _store: aliasDir('store'),
-            _styles: aliasDir('styles'),
-            _utils: aliasDir('utils'),
-
-            _createActionCreators: aliasDir('utils/redux/createActionCreators'),
-            _extractActionTypes: aliasDir('utils/redux/extractActionTypes'),
-            _createReducer: aliasDir('utils/redux/createReducer'),
+            '@': ''
         },
     },
     module: {

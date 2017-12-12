@@ -1,6 +1,6 @@
 {
   "name": "react-redux-boilerplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A full-featured react+redux boilerplate with ant.design and css-modules.",
   "repository": {
     "type": "git",

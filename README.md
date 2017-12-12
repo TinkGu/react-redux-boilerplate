@@ -2,12 +2,8 @@
 
 # Features
 
-- ES6+ (`stage-0`) and source-map
-- `redux`+`redux-thunk` and some helpers (see under `utils/redux/`)
+- ES2017+
 - live-reload and hot-replacement
-- mock-server (supported by `json-server` and `nodemon`)
-- `ant.design` (optional)
-- `css-modules` (optional)
 
 # Usage
 
@@ -23,8 +19,6 @@ $ npm start
 
 # TODO
 
-- [ ] support different code styles
-- [ ] support different state management frameworks
-- [ ] support different async management frameworks
-- [ ] docs
 - [ ] test and ci
+- [ ] dynamic import
+- [ ] state-management

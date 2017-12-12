@@ -8,18 +8,17 @@
 
 // 使用 eslint-disable-next-line 进行单例违法
 module.exports = {
-    root: true,
     extends: ['airbnb', 'loose-airbnb-react'],
-    env: {
-        browser: true,
-        node: true,
-        jest: true,
-        es6: true,
-        webextensions: true,
+    plugins: ['import', 'react', 'jsx-a11y'],
+    settings: {
+        'import/resolver': {
+            webpack: {
+                config: 'build/webpack.base.conf.js'
+            }
+        }
     },
     parser: 'babel-eslint',
     parserOptions: {
-        sourceType: 'module',
         ecmaVersion: 2017,
         ecmaFeatures: {
             classes: true,
@@ -28,12 +27,12 @@ module.exports = {
         },
     },
     rules: {
-        semi: 1,
-        indent: [
-            1,
-            4, {
-                SwitchCase: 1,
-            },
-        ]
-    },
+        semi: [1, 'never'],
+        'import/no-extraneous-dependencies': ['error', {
+            'devDependencies': [
+                'build/**',
+                'postcss.config.js'
+            ]
+        }]
+    }
 }

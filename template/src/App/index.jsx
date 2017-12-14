@@ -1,6 +1,6 @@
 import React from 'react'
-import { Provider } from 'react-redux'
 {{#redux}}
+import { Provider } from 'react-redux'
 import store from './store'
 {{/redux}}
 import Routers from './Routers'

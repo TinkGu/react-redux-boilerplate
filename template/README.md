@@ -28,7 +28,7 @@
 ## run app
 
 - `npm start`
-- open `0.0.0.0:3999` in your browser
+- open `localhost:3999` in your browser
 
 # build sop
 

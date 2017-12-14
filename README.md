@@ -3,6 +3,9 @@
 # Features
 
 - ES2017+
+- postcss
+- dynamic import
+- state management
 - live-reload and hot-replacement
 
 # Usage
@@ -20,5 +23,3 @@ $ npm start
 # TODO
 
 - [ ] test and ci
-- [ ] dynamic import
-- [ ] state-management

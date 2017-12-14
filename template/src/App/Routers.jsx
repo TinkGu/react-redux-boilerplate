@@ -5,8 +5,9 @@ import {
     Switch,
 } from 'react-router-dom'
 import history from './history'
+{{#redux}}
 import asyncImport from './asyncImport'
-
+{{/redux}}
 import Home from '../Home'
 import NotMatch from '../NotMatch'
 

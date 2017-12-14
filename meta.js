@@ -1,4 +1,16 @@
 module.exports = {
+    "helpers": {
+        "if_or": function (v1, v2, options) {
+            if (v1 || v2) {
+                return options.fn(this)
+            }
+
+            return options.inverse(this);
+        },
+        "_not": function (x, options) {
+            return x ? options.inverse(this) : options.fn(this)
+        }
+    },
     "prompts": {
         "name": {
             "type": "string",
@@ -21,6 +33,10 @@ module.exports = {
             "type": "string",
             "message": "Author"
         },
+        "redux": {
+            "type": "confirm",
+            "message": "Use Redux?"
+        },
         "resetCss": {
             "type": "confirm",
             "message": "Normalize the default style?"
@@ -33,7 +49,11 @@ module.exports = {
     "filters": {
         ".eslintignore": "eslint",
         ".eslintrc.js": "eslint",
-        "src/styles/reset.css": "resetCss"
+        "src/styles/reset.css": "resetCss",
+        "src/App/asyncImport.js": "redux",
+        "src/App/ducks.js": "redux",
+        "src/App/store.js": "redux",
+        "src/Counter": "redux"
     },
     "completeMessage": "Have Fun!"
 };

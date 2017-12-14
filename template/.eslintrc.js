@@ -33,6 +33,10 @@ module.exports = {
                 'build/**',
                 'postcss.config.js'
             ]
-        }]
+        }],
+        'jsx-a11y/anchor-is-valid': 0,
+    },
+    globals: {
+        __ENV__: true,
     }
 }
